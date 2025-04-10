@@ -2,8 +2,6 @@ import time
 from options import TrainOptions
 from dataloader.data_loader import dataloader
 from model import create_model
-
-
 if __name__ == '__main__':
     # get training options
     opt = TrainOptions().parse()
@@ -34,9 +32,6 @@ if __name__ == '__main__':
             model.optimize_parameters()
 
             # display images on visdom and save images
-
-
-
 
             # save the latest model every <save_latest_freq> iterations to the disk
             if total_iteration % opt.save_latest_freq == 0:
