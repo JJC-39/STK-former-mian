@@ -1,57 +1,20 @@
 
-!
+
 
 # STK-former: Efficient Image Inpainting Model Based on TopK Sparse Attention and Dynamic K-value Regulation
 
-<br>
 
-This repository implements the training, testing and editing tools for "Pluralistic Image Completion" by [Chuanxia Zheng](http://www.chuanxiaz.com), [Tat-Jen Cham](http://www.ntu.edu.sg/home/astjcham/) and [Jianfei Cai](http://www.ntu.edu.sg/home/asjfcai/) at NTU. Given one masked image, the proposed **Pluralistic** model is able to generate *multiple* and *diverse* plausible results with various structure, color and texture.
 
-## Editing example
-[image](https://github.com/user-attachments/assets/d1b58254-c877-4aed-814a-548e12b96fd0)
-<img src='images/free_form.gif' align="center">
-
-## Example results
-
-<table>
-<tr>
-<td><img src='images/mask_celeba_185755.jpg'></td>
-<td><img src='images/celeba185755.gif'></td>
-<td><img src='images/mask_celeba_184919.jpg'></td>
-<td><img src='images/celeba184919.gif'></td>
-</tr>
-
-<tr>
-<td><img src='images/mask_paris_085.png'></td>
-<td><img src='images/paris85.gif'></td>
-<td><img src='images/mask_Places_00030002.jpg'></td>
-<td><img src='images/place30002.gif'></td>
-</tr>
 
 </table>
 
 Example completion results of our method on images of face ([CelebA](http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html)), building ([Paris](https://github.com/pathak22/context-encoder)), and natural scenes ([Places2](http://places2.csail.mit.edu/)) with center masks (masks shown in gray). For each group, the masked input image is shown left, followed by sampled results from our model without any post-processing. The results are diverse and plusible.
 
-## [More results on project page](https://chuanxiaz.com/pic/)
 
 # Getting started
 ## Installation
-This code was tested with Pytoch 0.4.0, CUDA 9.0, Python 3.6 and Ubuntu 16.04
+This code was tested with Pytoch 1.10.0, CUDA 11.3, Python 3.6 
 
-*The GUI program was further verified compatible with PyTorch 1.7.0, CUDA 11.2, Python 3.6 and Ubuntu 20.04.*
-
-- Install Pytoch 0.4, torchvision, and other dependencies from [http://pytorch.org](http://pytorch.org)
-- Install python libraries [visdom](https://github.com/facebookresearch/visdom) and [dominate](https://github.com/Knio/dominate) for visualization
-
-```
-pip install visdom dominate
-```
-- Clone this repo:
-
-```
-git clone https://github.com/lyndonzheng/Pluralistic
-cd Pluralistic
-```
 
 ## Datasets
 - ```face dataset```: 24183 training images and  2824 test images from [CelebA](http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html) and use the algorithm of [Growing GANs](https://github.com/tkarras/progressive_growing_of_gans) to get the high-resolution CelebA-HQ dataset
