@@ -24,7 +24,7 @@ This code was tested with Pytoch 1.10.0, CUDA 11.3, Python 3.6
 
 
 # License
-<br />This work is licensed under a <a rel="license" href="(https://github.com/lyndonzheng/Pluralistic-Inpainting)"> License</a>.
+<br />This work is licensed under a <a rel="license" href="https://github.com/lyndonzheng/Pluralistic-Inpainting/blob/main/LICENSE">MIT License</a>.
 
 
 # Citation
